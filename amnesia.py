@@ -2,24 +2,6 @@
 # other note taking / journal utils don't do what I want
 # so we're gonna hack together our own
 
-# needs:
-# - ability to separate work and personal 'notebooks
-# - ability to record recurring events (weekly 1-on-1 meetings) and one-offs
-# - ability to search, both topics/tags and full text
-# - backup / resiliency
-# - cross-platform compat
-
-# design
-# - leverage pandoc to go from markdown to html
-#   * why markdown? it's semi-universal and feature-rich
-# - automate directory and file management
-# - build out to programmatically prompting for title, topics, etc
-# wmy am I doing this all in comments? because it's FUN and HACKER
-
-# TODO
-# - [ ] get notebook creation / deletion working
-# - [ ] get nice user prompt for input working
-
 import argparse
 import datetime
 import json
@@ -47,8 +29,8 @@ class State:
 
 
 class DefaultProgramForOS:
-    # adapted from https://stackoverflow.com/questions/434597/open-document-with-default-application-in-python
     "to open a thing in system default editor"
+    # adapted from https://stackoverflow.com/questions/434597/open-document-with-default-application-in-python
 
     @staticmethod
     def open(filepath) -> None:
